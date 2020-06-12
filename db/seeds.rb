@@ -7,13 +7,64 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
+
+Dose.destroy_all
 Ingredient.destroy_all
 Cocktail.destroy_all
 
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "mint leaves")
 
-Cocktail.create(name: "Lemonade")
-Cocktail.create(name: "Gin To")
-Cocktail.create(name: "Cuba Libre")
+puts "destroy done !"
+ingredients = [
+  {
+    name: 'lemon',
+  },
+  {
+    name: 'Ice',
+  },
+  {
+    name: 'Mint leaves',
+  },
+  {
+    name: 'Rhum',
+  },
+  {
+    name: 'Gin',
+  },
+  {
+    name: 'Vodka',
+  },
+  {
+    name: 'Coca',
+  },
+  {
+    name: 'Tonic',
+  },
+  {
+    name: 'Cocumber',
+  },
+  {
+    name: 'Milk',
+  },
+  {
+    name: 'Ginger Beer',
+  },
+]
+
+Ingredient.create(ingredients)
+
+puts "ingredients done ! !"
+
+cocktails = [
+  {
+    name: 'Lemonade',
+  },
+  {
+    name: 'Gin To',
+  },
+  {
+    name: 'Cuba Libre',
+  },
+]
+Cocktail.create(cocktails)
+
+puts "seed done !"
